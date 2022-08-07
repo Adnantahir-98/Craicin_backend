@@ -25,6 +25,7 @@ const BookingTourSchema = new mongoose.Schema({
     },
     leavingOn:{
         type: String,
+        require: true
     },
     tourdate:{
         type: String,
@@ -38,6 +39,13 @@ const BookingTourSchema = new mongoose.Schema({
     },
     image: {
         type: String,
+    },
+    availability:{
+        type: false
+    },
+    dated: {
+        type: Date,
+        default: Date.now
     }
 })
 
