@@ -12,9 +12,6 @@ const BookingTourSchema = new mongoose.Schema({
         type: String,
         require: true,
     },
-    confirmEmail:{
-        type: String
-    },
     country:{
         type: String
     },
@@ -22,52 +19,24 @@ const BookingTourSchema = new mongoose.Schema({
         type: String,
         require: true,
     },
-    adults:{
-        type: Number,
-        max: 10,
-    },
-    adultsFirstName:{
+    adults:[{
         type: String
-    },
-    adultsLastName:{
+    }],
+    students:[{
         type: String
-    },
-    students:{
-        type: String,
-        max: 10,
-    },
-    studentFirstName:{
+    }],
+    serniors:[{
         type: String
-    },
-    studentLastName:{
+    }],
+    Childrens:[{
         type: String
-    },
-    serniors:{
-        type: String,
-        max: 10,
-    },
-    seniorsFirstName:{
-        type: String
-    },
-    serniorLastName:{
-        type: String
-    },
-    Childrens:{
-        type: String,
-        max: 10,
-    },
-    childrenFirstName:{
-        type: String
-    },
-    childrenLastName:{
-        type: String
-    },
+    }],
     Disability:{
         type: String,
     },
     emailUpdates:{
         type: false
     }
-})
+},{timestamps: true})
 
 module.exports = mongoose.model('bookingTourDetails', BookingTourSchema)

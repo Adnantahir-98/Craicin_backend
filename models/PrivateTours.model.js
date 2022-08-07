@@ -28,12 +28,8 @@ const PriavteTourBookingSchema = new mongoose.Schema({
     },
     Describe:{
         type: String
-    },
-    createdAt: {
-        type: String
     }
-
-})
+},{timestamps: true})
 
 
 module.exports = mongoose.model('PrivateTourBooking', PriavteTourBookingSchema)

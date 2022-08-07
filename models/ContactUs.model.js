@@ -11,11 +11,7 @@ const ContactUsSchema = new mongoose.Schema({
     },
     message:{
         type: String
-    },
-    date:{
-        type: Date,
-        default: Date.now
     }
-})
+},{timestamps: true})
 
 module.exports = mongoose.model('ContactUs', ContactUsSchema)

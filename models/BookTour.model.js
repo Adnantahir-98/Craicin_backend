@@ -27,13 +27,6 @@ const BookingTourSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    tourdate:{
-        type: String,
-    },
-    date: {
-        type: Date,
-        default: Date.now
-    },
     cost:{
         type: String,
     },
@@ -42,12 +35,8 @@ const BookingTourSchema = new mongoose.Schema({
     },
     availability:{
         type: false
-    },
-    dated: {
-        type: Date,
-        default: Date.now
     }
-})
+}, {timestamps: true})
 
 
 module.exports = mongoose.model('tourbooking', BookingTourSchema)
